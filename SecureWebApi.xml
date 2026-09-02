@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SecureWebApi</name>
+    </assembly>
+    <members>
+        <member name="T:SecureWebApi.Controllers.AuthController">
+            <summary>
+            Provides user registration, login and token refresh operations.
+            </summary>
+        </member>
+        <member name="M:SecureWebApi.Controllers.AuthController.Register(SecureWebApi.DTOs.RegisterRequest)">
+            <summary>
+            Registers a new user.
+            </summary>
+            <param name="request">Registration details.</param>
+            <returns>Registration result.</returns>
+        </member>
+        <member name="M:SecureWebApi.Controllers.AuthController.Login(SecureWebApi.DTOs.LoginRequest)">
+            <summary>
+            Authenticates a user and returns access and refresh tokens.
+            </summary>
+            <param name="request">Login credentials.</param>
+            <returns>JWT access token and refresh token.</returns>
+        </member>
+        <member name="M:SecureWebApi.Controllers.AuthController.Refresh(SecureWebApi.DTOs.RefreshTokenRequest)">
+            <summary>
+            Rotates the refresh token and generates a new access token.
+            </summary>
+            <param name="request">Current refresh token.</param>
+            <returns>New access and refresh tokens.</returns>
+        </member>
+        <member name="T:SecureWebApi.Controllers.ProductsController">
+            <summary>
+            Provides CRUD operations for products.
+            </summary>
+        </member>
+        <member name="M:SecureWebApi.Controllers.ProductsController.GetProducts(System.Int32,System.Int32)">
+            <summary>
+            Gets a paginated list of products.
+            </summary>
+            <param name="pageNumber">Page number. Default is 1.</param>
+            <param name="pageSize">Number of products per page. Maximum is 100.</param>
+            <returns>A paginated list of products.</returns>
+        </member>
+        <member name="M:SecureWebApi.Controllers.ProductsController.GetProduct(System.Int32)">
+            <summary>
+            Gets a product by its ID.
+            </summary>
+            <param name="id">Product ID.</param>
+            <returns>The requested product.</returns>
+        </member>
+        <member name="M:SecureWebApi.Controllers.ProductsController.CreateProduct(SecureWebApi.DTOs.CreateProductRequest)">
+            <summary>
+            Creates a new product.
+            </summary>
+            <param name="request">Product creation details.</param>
+            <returns>The newly created product.</returns>
+        </member>
+        <member name="M:SecureWebApi.Controllers.ProductsController.UpdateProduct(System.Int32,SecureWebApi.DTOs.UpdateProductRequest)">
+            <summary>
+            Updates an existing product.
+            </summary>
+            <param name="id">Product ID.</param>
+            <param name="request">Updated product details.</param>
+            <returns>The updated product.</returns>
+        </member>
+        <member name="M:SecureWebApi.Controllers.ProductsController.DeleteProduct(System.Int32)">
+            <summary>
+            Deletes a product.
+            </summary>
+            <param name="id">Product ID.</param>
+            <returns>No content when deletion is successful.</returns>
+        </member>
+        <member name="T:SecureWebApi.Migrations.DBCS">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.DBCS.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.DBCS.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.DBCS.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecureWebApi.Migrations.AddProductIndexes">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.AddProductIndexes.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.AddProductIndexes.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.AddProductIndexes.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecureWebApi.Migrations.AddUsers">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.AddUsers.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.AddUsers.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.AddUsers.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecureWebApi.Migrations.AddRefreshTokens">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.AddRefreshTokens.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.AddRefreshTokens.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecureWebApi.Migrations.AddRefreshTokens.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
